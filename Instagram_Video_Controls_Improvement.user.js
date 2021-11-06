@@ -5,6 +5,7 @@
 // @description  Adds video playback controls to Instagram videos embedded in web pages (seek bar, volume, play/pause video button), And also you can change speed rate video.
 // @author       Nabi K.A.Z. <nabikaz@gmail.com>
 // @match        https://www.instagram.com/p/*
+// @match        https://www.instagram.com/tv/*
 // ==/UserScript==
 
 (function() {
@@ -76,7 +77,7 @@
         divControl.appendChild(spnX);
         divControl.appendChild(btnIncrease);
 
-        var divContainer = document.querySelector('article > div:nth-child(3)');
+        var divContainer = document.querySelector('article > div > div');
         divContainer.appendChild(divControl);
 
     }, 1000);
